@@ -1,0 +1,19 @@
+{
+  "name": "bankist",
+  "version": "1.0.0",
+  "description": "## Bach Tran Anh Duc",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BachTranAnhDuc/Bankist.git"
+  },
+  "author": "Anh Duc",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BachTranAnhDuc/Bankist/issues"
+  },
+  "homepage": "https://github.com/BachTranAnhDuc/Bankist#readme"
+}
