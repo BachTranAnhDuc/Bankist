@@ -1,0 +1,64 @@
+.slider {
+  max-width: 90rem;
+  height: 50rem;
+
+  margin: 0 auto;
+
+  position: relative;
+}
+
+.slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50rem;
+  width: 100%;
+}
+
+.testimonial {
+  position: relative;
+
+  &::after {
+    content: "\201C";
+    position: absolute;
+    font-size: 20rem;
+    // height: 4.8rem;
+    color: $color-primary;
+    top: -16rem;
+    left: -7rem;
+  }
+
+  .testimonial__heading {
+    @include heading__five;
+    font-size: 2.4rem;
+  }
+
+  .testimonial__text {
+    font-size: 1.8rem;
+    font-weight: 300;
+  }
+
+  .testimonial__author {
+    display: grid;
+    grid-template-columns: 6.2rem 1fr;
+    gap: 0rem 2.4rem;
+    margin-left: 3.2rem;
+  }
+
+  .testimonial__name {
+    font-size: 1.8rem;
+    font-weight: 400;
+  }
+
+  .testimonial__location {
+    grid-column: 2 / 3;
+  }
+
+  .testimonial__photo {
+    height: 6.2rem;
+    width: 6.2rem;
+    border-radius: 50%;
+
+    grid-row: 1 / 3;
+  }
+}

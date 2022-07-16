@@ -1,0 +1,33 @@
+.footer {
+  background-color: #37383d;
+  padding: 10rem 3rem;
+  color: #fff;
+
+  &__nav {
+    display: flex;
+    gap: 3.6rem;
+    justify-content: center;
+  }
+
+  &__item {
+  }
+
+  &__link:link,
+  &__link:visited {
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-weight: 300;
+    color: #fff;
+  }
+
+  &__logo {
+    height: 5rem;
+    display: block;
+    margin: 0 auto;
+  }
+
+  &__copyright {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+}

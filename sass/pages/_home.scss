@@ -6,4 +6,17 @@
     margin: 8rem auto;
     max-width: 90rem;
   }
+
+  &__title {
+    margin: 0rem auto;
+    max-width: 90rem;
+  }
+
+  &__header {
+    font-size: 4rem;
+    font-weight: 500;
+    color: #fff;
+    text-align: center;
+    line-height: 1.2;
+  }
 }
