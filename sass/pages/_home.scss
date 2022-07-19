@@ -20,3 +20,14 @@
     line-height: 1.2;
   }
 }
+
+.cookie-message {
+  // position: absolute;
+  // top: 0;
+  // left: 0;
+  // max-width: 10rem;
+  display: flex;
+  align-items: center;
+  gap: 2.4rem;
+  background-color: #fff;
+}

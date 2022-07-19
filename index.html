@@ -42,7 +42,7 @@
         <h4 class="heading--four">
           A simple banking experience for a simple life
         </h4>
-        <a href="#" class="btn--text">Learn more &darr;</a>
+        <button class="btn--text btn--scroll-to">Learn more &darr;</button>
         <img src="img/hero.png" alt="heading image" class="header__img" />
       </div>
     </header>
@@ -57,7 +57,11 @@
         </div>
 
         <div class="features">
-          <img src="img/digital-lazy.jpg" alt="img" class="features__img" />
+          <img
+            src="img/digital-lazy.jpg"
+            alt="img"
+            class="features__img lazy-img"
+          />
           <div class="features__feature">
             <div class="features__icon u-margin-bottom--2"></div>
             <h5 class="features__heading u-margin-bottom--2">
@@ -79,9 +83,17 @@
               unde, inventore quidem expedita magnam nihil, vero odit magni.
             </p>
           </div>
-          <img src="img/grow-lazy.jpg" alt="img" class="features__img" />
+          <img
+            src="img/grow-lazy.jpg"
+            alt="img"
+            class="features__img lazy-img"
+          />
 
-          <img src="img/card-lazy.jpg" alt="img" class="features__img" />
+          <img
+            src="img/card-lazy.jpg"
+            alt="img"
+            class="features__img lazy-img"
+          />
           <div class="features__feature">
             <div class="features__icon u-margin-bottom--2"></div>
             <h5 class="features__heading u-margin-bottom--2">
@@ -257,7 +269,7 @@
       </p>
     </footer>
 
-    <div class="modal">
+    <div class="modal hidden">
       <button class="btn--close-modal">x</button>
       <h2 class="modal__header u-margin-bottom--4">
         Open your bank account in just <span class="highlight"> 5 minutes</span>
@@ -275,6 +287,8 @@
       </form>
     </div>
 
-    <div class="overlay"></div>
+    <div class="overlay hidden"></div>
+
+    <script src="js/script.js"></script>
   </body>
 </html>

@@ -59,7 +59,8 @@ body {
 .u-margin-bottom--16 {
   margin-bottom: 16rem !important; }
 
-.btn--text:link, .btn--text:visited {
+.btn--text, .btn--text:link, .btn--text:visited {
+  border: none;
   display: inline-block;
   text-decoration: none;
   font-size: 1.8rem;
@@ -67,7 +68,8 @@ body {
   border-bottom: 1px solid #5ec576;
   backface-visibility: visible;
   transition: all 0.4s;
-  padding: 0.8rem 1.2rem; }
+  padding: 0.8rem 1.2rem;
+  cursor: pointer; }
 
 .btn--text:hover, .btn--text:active {
   background-color: #4bbb7d;
@@ -163,6 +165,9 @@ body {
   .features__text {
     font-size: 1.6rem;
     font-weight: 300; }
+
+.lazy-img {
+  filter: blur(24px); }
 
 .operations {
   background-color: #fff;
@@ -408,3 +413,9 @@ body {
     color: #fff;
     text-align: center;
     line-height: 1.2; }
+
+.cookie-message {
+  display: flex;
+  align-items: center;
+  gap: 2.4rem;
+  background-color: #fff; }
