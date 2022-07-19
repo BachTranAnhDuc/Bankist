@@ -86,3 +86,65 @@ const h1 = document.querySelector("h1");
 //     }),
 //   3000
 // );
+
+// 1. Add event listener to commom parent element.
+// 2. Determine what element orginated the event
+// [...document.querySelectorAll(".nav__link")].forEach((nav) => {
+//   nav.addEventListener("click", function (e) {
+//     e.preventDefault();
+//     const id = this.getAttribute("href");
+//     console.log(id);
+//   });
+// });
+
+// [...document.querySelectorAll(".nav__link")].forEach((nav) => {
+//   console.log(nav);
+// });
+
+// console.log("....");
+
+// document.querySelectorAll(".nav__link").forEach((nav) => {
+//   nav.addEventListener("click", function (e) {
+//     e.preventDefault();
+
+//     const id = nav.getAttribute("href");
+
+//     // console.log(id);
+//     // console.log(typeof id);
+
+//     document.querySelector(`#${id}`).scrollIntoView({
+//       behavior: "smooth",
+//     });
+
+//     // document.getElementById(id).scrollIntoView({
+//     //   behavior: "smooth",
+//     // });
+//   });
+// });
+
+document.querySelector(".nav__links").addEventListener("click", function (e) {
+  e.preventDefault();
+
+  if (e.target.classList.contains("nav__link")) {
+    const id = e.target.getAttribute("href");
+
+    console.log(id);
+
+    document.querySelector(`#${id}`).scrollIntoView({
+      behavior: "smooth",
+    });
+  }
+
+  // console.log(e.target.getAttribute("href"));
+});
+
+// going downwards: child
+
+// console.log(h1.closest(".header"));
+
+// [...h1.parentElement.children].forEach((el) => {
+//   if (el !== h1) {
+//     console.log(el);
+//     el.style.transform = "scale(0.5)";
+//   }
+// });
