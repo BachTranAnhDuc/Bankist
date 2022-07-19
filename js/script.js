@@ -1,12 +1,24 @@
 "use strict";
 
-///////////////////////////////////////
-// Modal window
-
 const modal = document.querySelector(".modal");
 const overlay = document.querySelector(".overlay");
 const btnCloseModal = document.querySelector(".btn--close-modal");
 const btnsOpenModal = document.querySelectorAll(".btn--show-modal");
+const tabs = document.querySelectorAll(".operations__tab");
+const tabsContainer = document.querySelector(".operations__tab-container");
+const tabsContent = document.querySelectorAll(".operations__content");
+const header = document.querySelector(".header");
+const allButtons = document.getElementsByTagName("button");
+
+// const message = document.createElement("div");
+// const btnCloseCookie = document.querySelector(".btn--close-cookie");
+// const btnScrollTo = document.querySelector(".btn--scroll-to");
+const section1 = document.querySelector("#section--1");
+const h1 = document.querySelector("h1");
+const nav = document.querySelector(".nav");
+
+///////////////////////////////////////
+// Modal window
 
 const openModal = function (e) {
   e.preventDefault();
@@ -36,40 +48,30 @@ document.addEventListener("keydown", function (e) {
 
 //////////////////////////////////////////////////////////////////////
 
-const header = document.querySelector(".header");
-const allButtons = document.getElementsByTagName("button");
+// message.classList.add("cookie-message");
 
-const message = document.createElement("div");
+// message.innerHTML = `We use cookied for improved function ality and analytics. <button class="btn btn--close-cookie">Got it</button>`;
+// header.prepend(message);
 
-message.classList.add("cookie-message");
+// btnCloseCookie.addEventListener("click", function (e) {
+//   e.preventDefault();
+//   message.parentElement.removeChild(message);
+// });
 
-message.innerHTML = `We use cookied for improved function ality and analytics. <button class="btn btn--close-cookie">Got it</button>`;
-header.prepend(message);
+// message.style.padding = "0 1.2rem";
+// message.style.marginTop = "1.2rem";
 
-const btnCloseCookie = document.querySelector(".btn--close-cookie");
-btnCloseCookie.addEventListener("click", function (e) {
-  e.preventDefault();
-  message.parentElement.removeChild(message);
-});
+// // Scroll
 
-message.style.padding = "0 1.2rem";
-message.style.marginTop = "1.2rem";
+// btnScrollTo.addEventListener("click", function (e) {
+//   const s1coords = section1.getBoundingClientRect();
 
-// Scroll
-
-const btnScrollTo = document.querySelector(".btn--scroll-to");
-const section1 = document.querySelector("#section--1");
-
-btnScrollTo.addEventListener("click", function (e) {
-  const s1coords = section1.getBoundingClientRect();
-
-  section1.scrollIntoView({
-    behavior: "smooth",
-  });
-});
+//   section1.scrollIntoView({
+//     behavior: "smooth",
+//   });
+// });
 
 /// Handle event
-const h1 = document.querySelector("h1");
 
 // const al = function () {
 //   alert("Thank you for comming");
@@ -151,10 +153,6 @@ document.querySelector(".nav__links").addEventListener("click", function (e) {
 
 // Operations
 
-const tabs = document.querySelectorAll(".operations__tab");
-const tabsContainer = document.querySelector(".operations__tab-container");
-const tabsContent = document.querySelectorAll(".operations__content");
-
 tabsContainer.addEventListener("click", function (e) {
   const clicked = e.target.closest(".operations__tab");
 
@@ -180,3 +178,26 @@ tabsContainer.addEventListener("click", function (e) {
     .querySelector(`.operations__content--${clicked.dataset.tab}`)
     .classList.add("operations__content--active");
 });
+
+// Menu fade animation
+
+const handleHover = function (e) {
+  if (e.target.classList.contains("nav__link")) {
+    // console.log(e.target);
+    const link = e.target;
+    const siblings = link.closest("nav").querySelectorAll(".nav__link");
+    const logo = link.closest("nav").querySelector(".nav__logo");
+    // const siblings = nav.querySelectorAll(".nav__link");
+
+    siblings.forEach((el) => {
+      if (link !== el) {
+        el.style.opacity = this;
+      }
+    });
+
+    logo.style.opacity = this;
+  }
+};
+
+nav.addEventListener("mouseover", handleHover.bind(0.5));
+nav.addEventListener("mouseout", handleHover.bind(1));

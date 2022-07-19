@@ -42,6 +42,8 @@
   padding: 3.2rem 6.2rem;
   height: 9rem;
 
+  z-index: 10000;
+
   &__logo {
     height: 4.5rem;
     cursor: pointer;
@@ -71,6 +73,11 @@
   &__link:hover,
   &__link:active {
     border-bottom: 2px solid $color-primary;
+  }
+
+  &.sticky {
+    position: fixed;
+    background-color: #fff;
   }
 }
 

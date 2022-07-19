@@ -349,7 +349,8 @@ body {
   align-items: center;
   width: 100%;
   padding: 3.2rem 6.2rem;
-  height: 9rem; }
+  height: 9rem;
+  z-index: 10000; }
   .nav__logo {
     height: 4.5rem;
     cursor: pointer; }
@@ -366,6 +367,9 @@ body {
     transition: all 0.3s; }
   .nav__link:hover, .nav__link:active {
     border-bottom: 2px solid #5ec576; }
+  .nav.sticky {
+    position: fixed;
+    background-color: #fff; }
 
 .highlight {
   position: relative; }
