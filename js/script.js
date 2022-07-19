@@ -148,3 +148,35 @@ document.querySelector(".nav__links").addEventListener("click", function (e) {
 //     el.style.transform = "scale(0.5)";
 //   }
 // });
+
+// Operations
+
+const tabs = document.querySelectorAll(".operations__tab");
+const tabsContainer = document.querySelector(".operations__tab-container");
+const tabsContent = document.querySelectorAll(".operations__content");
+
+tabsContainer.addEventListener("click", function (e) {
+  const clicked = e.target.closest(".operations__tab");
+
+  // Guard clause
+  if (!clicked) return;
+
+  // hide button active
+  [...tabs].forEach((el) => {
+    el.classList.remove("operations__tab--action");
+  });
+
+  // hide content active
+  [...tabsContent].forEach((el) => {
+    el.classList.remove("operations__content--active");
+  });
+
+  // active button
+  clicked.classList.add("operations__tab--action");
+
+  // active content
+  // console.log(clicked.dataset.tab);
+  document
+    .querySelector(`.operations__content--${clicked.dataset.tab}`)
+    .classList.add("operations__content--active");
+});

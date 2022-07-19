@@ -82,18 +82,20 @@
   &__icon {
     width: 6.4rem;
     height: 6.4rem;
-    background-color: $color-secondary-opacity;
     border-radius: 50%;
 
     justify-self: center;
 
     &--1 {
+      background-color: $color-secondary-opacity;
     }
 
     &--2 {
+      background-color: $color-primary-opacity;
     }
 
     &--3 {
+      background-color: $color-tertiary-opacity;
     }
   }
 

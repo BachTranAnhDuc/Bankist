@@ -210,9 +210,14 @@ body {
   .operations__icon {
     width: 6.4rem;
     height: 6.4rem;
-    background-color: #ffcd0331;
     border-radius: 50%;
     justify-self: center; }
+    .operations__icon--1 {
+      background-color: #ffcd0331; }
+    .operations__icon--2 {
+      background-color: #5ec5763a; }
+    .operations__icon--3 {
+      background-color: #ff58602d; }
   .operations__heading {
     font-size: 2rem;
     font-weight: 500; }
