@@ -394,3 +394,5 @@ const sliders = function () {
 };
 
 sliders();
+
+// OOP
