@@ -71,16 +71,18 @@
 }
 
 .slider__btn {
+  position: absolute;
   width: 6.2rem;
   height: 6.2rem;
 
   border: none;
   background-color: #fff;
+  // background-color: aqua;
   border-radius: 50%;
 
-  position: absolute;
-
   transform: translateY(-50%);
+
+  z-index: 10000;
 
   cursor: pointer;
 
@@ -88,14 +90,14 @@
     top: 50%;
     left: 0;
 
-    transform: translateY(-50%) translateX(-200%);
+    // transform: translateY(-50%) translateX(-10%);
   }
 
   &--right {
     top: 50%;
     right: 0;
 
-    transform: translateY(-50%) translateX(200%);
+    // transform: translateY(-50%) translateX(10%);
   }
 }
 
@@ -106,7 +108,7 @@
 
   top: 100%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -100%);
 
   &__dot {
     width: 1rem;
@@ -116,6 +118,8 @@
     border-radius: 50%;
 
     background-color: #b9b9b9;
+
+    cursor: pointer;
     &--active {
       background-color: #888;
     }

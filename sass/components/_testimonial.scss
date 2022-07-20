@@ -1,22 +1,42 @@
 .slider {
-  max-width: 90rem;
+  max-width: 100rem;
   height: 50rem;
 
   margin: 0 auto;
 
   position: relative;
+
+  overflow: hidden;
+  // overflow-x: hidden;
 }
 
 .slide {
+  position: absolute;
+  top: 0;
+  height: 50rem;
+  width: 100%;
+
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 50rem;
-  width: 100%;
+  transition: all 1s;
+
+  // &--1 {
+  //   transform: translateX(0%);
+  // }
+
+  // &--2 {
+  //   transform: translateX(100%);
+  // }
+
+  // &--3 {
+  //   transform: translateX(200%);
+  // }
 }
 
 .testimonial {
   position: relative;
+  width: 65%;
 
   &::after {
     content: "\201C";

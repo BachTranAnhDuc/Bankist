@@ -106,22 +106,21 @@ body {
     font-size: 3rem; }
 
 .slider__btn {
+  position: absolute;
   width: 6.2rem;
   height: 6.2rem;
   border: none;
   background-color: #fff;
   border-radius: 50%;
-  position: absolute;
   transform: translateY(-50%);
+  z-index: 10000;
   cursor: pointer; }
   .slider__btn--left {
     top: 50%;
-    left: 0;
-    transform: translateY(-50%) translateX(-200%); }
+    left: 0; }
   .slider__btn--right {
     top: 50%;
-    right: 0;
-    transform: translateY(-50%) translateX(200%); }
+    right: 0; }
 
 .dots {
   display: flex;
@@ -129,13 +128,14 @@ body {
   position: absolute;
   top: 100%;
   left: 50%;
-  transform: translate(-50%, -50%); }
+  transform: translate(-50%, -100%); }
   .dots__dot {
     width: 1rem;
     height: 1rem;
     border: none;
     border-radius: 50%;
-    background-color: #b9b9b9; }
+    background-color: #b9b9b9;
+    cursor: pointer; }
     .dots__dot--active {
       background-color: #888; }
 
@@ -228,20 +228,25 @@ body {
     grid-column: 2 / 3; }
 
 .slider {
-  max-width: 90rem;
+  max-width: 100rem;
   height: 50rem;
   margin: 0 auto;
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
 
 .slide {
+  position: absolute;
+  top: 0;
+  height: 50rem;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 50rem;
-  width: 100%; }
+  transition: all 1s; }
 
 .testimonial {
-  position: relative; }
+  position: relative;
+  width: 65%; }
   .testimonial::after {
     content: "\201C";
     position: absolute;
