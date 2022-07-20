@@ -410,7 +410,8 @@ body {
 
 .section {
   padding: 12rem 0;
-  border-top: 1px solid #ddd; }
+  border-top: 1px solid #ddd;
+  transition: all 1s; }
   .section-title {
     margin: 8rem auto;
     max-width: 90rem; }
@@ -423,6 +424,9 @@ body {
     color: #fff;
     text-align: center;
     line-height: 1.2; }
+  .section--hidden {
+    opacity: 0;
+    transform: translateY(8rem); }
 
 .cookie-message {
   display: flex;

@@ -9,6 +9,7 @@ const tabsContainer = document.querySelector(".operations__tab-container");
 const tabsContent = document.querySelectorAll(".operations__content");
 const header = document.querySelector(".header");
 const allButtons = document.getElementsByTagName("button");
+const allSections = document.querySelectorAll(".section");
 
 // const message = document.createElement("div");
 // const btnCloseCookie = document.querySelector(".btn--close-cookie");
@@ -238,3 +239,25 @@ const obsOptions = {
 const headerObserver = new IntersectionObserver(stickyNav, obsOptions);
 
 headerObserver.observe(header);
+
+// Reveal Sections
+const revealSection = function (entries, observer) {
+  const [entry] = entries;
+
+  if (!entry.isIntersecting) return;
+
+  entry.target.classList.remove("section--hidden");
+  observer.unobserve(entry.target);
+};
+
+const revealOptions = {
+  root: null,
+  threshold: 0.15,
+};
+
+const sectionObserver = new IntersectionObserver(revealSection, revealOptions);
+
+allSections.forEach((section) => {
+  sectionObserver.observe(section);
+  section.classList.add("section--hidden");
+});
