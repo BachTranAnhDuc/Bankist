@@ -153,7 +153,8 @@ body {
     justify-self: center;
     align-self: center; }
   .features__img {
-    width: 100%; }
+    width: 100%;
+    transition: all 0.3s; }
   .features__icon {
     width: 4.8rem;
     height: 4.8rem;
